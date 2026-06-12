@@ -334,11 +334,11 @@ export default function Home() {
               In-shop service at {BUSINESS.address.street}, Worcester, or we
               come to you with mobile service across the area:
             </p>
-            <ul className="mt-5 flex flex-wrap gap-2">
+            <ul className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4">
               {BUSINESS.serviceAreas.map((c) => (
                 <li
                   key={c}
-                  className="rounded-full border border-slate-300 px-4 py-1.5 text-sm font-semibold text-slate-700"
+                  className="rounded-full border border-slate-300 px-3 py-2 text-center text-sm font-semibold text-slate-700"
                 >
                   {c}
                 </li>
