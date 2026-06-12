@@ -23,7 +23,7 @@ export const BUSINESS = {
     { days: "Sunday", time: "By appointment" },
   ],
   schemaHours: ["Mo-Sa 08:00-18:00"],
-  rating: { value: 4.6, count: 66 },
+  rating: { value: 4.7, count: 70 }, // per GBP screenshot 2026-06-12
   directionsUrl:
     "https://www.google.com/maps/search/?api=1&query=42.2599,-71.7962",
   // Official GBP share link from Carlos (listing name: "Affordable Auto Glass & Repair Co")
