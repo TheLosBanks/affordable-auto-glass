@@ -104,7 +104,7 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
         <section className="mb-10 rounded-xl bg-brand-50 p-6">
           <h2 className="text-xl font-black tracking-tight">Service area</h2>
           <p className="mt-3 leading-relaxed text-slate-700">
-            In-shop at {BUSINESS.address.street}, Worcester, MA — or mobile
+            In-shop at {BUSINESS.address.street}, Worcester, MA, or mobile
             service at your home or workplace in{" "}
             {BUSINESS.serviceAreas.slice(0, -1).join(", ")}, and{" "}
             {BUSINESS.serviceAreas.at(-1)} and surrounding Central Massachusetts

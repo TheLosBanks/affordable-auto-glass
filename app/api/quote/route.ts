@@ -36,17 +36,17 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         from,
         to: [to],
-        subject: `Quote request: ${service} — ${name}`,
+        subject: `Quote request: ${service} from ${name}`,
         text: [
           `New quote request from ${BUSINESS.name} website`,
           ``,
           `Name: ${name}`,
           `Phone: ${phone}`,
           `Service: ${service}`,
-          `Vehicle: ${vehicle || "—"}`,
+          `Vehicle: ${vehicle || "n/a"}`,
           ``,
           `Message:`,
-          message || "—",
+          message || "n/a",
         ].join("\n"),
       }),
     });

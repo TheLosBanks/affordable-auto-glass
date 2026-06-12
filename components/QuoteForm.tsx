@@ -33,7 +33,7 @@ export default function QuoteForm() {
   if (status === "sent") {
     return (
       <div className="rounded-xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-        <p className="text-2xl font-extrabold">Got it — we&apos;ll call you back fast.</p>
+        <p className="text-2xl font-extrabold">Got it, we&apos;ll call you back fast.</p>
         <p className="mt-3 text-slate-600">
           Need help right now? Call{" "}
           <a href={BUSINESS.phoneHref} className="font-bold text-brand-600">
@@ -117,7 +117,7 @@ export default function QuoteForm() {
       </button>
       {status === "error" && (
         <p className="text-center text-sm font-semibold text-red-600">
-          Something went wrong — please call {BUSINESS.phone} instead.
+          Something went wrong, please call {BUSINESS.phone} instead.
         </p>
       )}
       <p className="text-center text-xs text-slate-500">

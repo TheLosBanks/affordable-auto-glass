@@ -4,7 +4,7 @@ import { PhoneIcon } from "@/components/Header";
 import QuoteForm from "@/components/QuoteForm";
 import Faq from "@/components/Faq";
 
-// Stock photography (Unsplash) — Carlos's call; the shop has no original
+// Stock photography (Unsplash). Carlos's call; the shop has no original
 // photos except one shop exterior shot on their old About page.
 const HERO_PHOTO =
   "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80";
@@ -16,7 +16,7 @@ const CLASSIC_PHOTO =
 const WHY_US = [
   {
     title: `${BUSINESS.yearsInBusiness} years in business`,
-    body: "A real local shop on King St — not a national call center.",
+    body: "A real local shop on King St, not a national call center.",
   },
   {
     title: `${BUSINESS.yearsExperience} years of experience`,
@@ -28,7 +28,7 @@ const WHY_US = [
   },
   {
     title: "Price match guarantee",
-    body: "Find a lower written quote? Bring it in — we'll match it.",
+    body: "Find a lower written quote? Bring it in, we'll match it.",
   },
   {
     title: "Lifetime warranty",
@@ -41,7 +41,7 @@ const WHY_US = [
 ];
 
 // Real Google reviews (screenshots from Carlos, 2026-06-12). Excerpted
-// verbatim — do not invent or embellish these.
+// verbatim, do not invent or embellish these.
 const REVIEWS = [
   {
     name: "Penny Aicardi",
@@ -56,19 +56,19 @@ const REVIEWS = [
   {
     name: "Arthur Mooradian",
     tag: "Local Guide",
-    text: "Great prices, dependable service… a local auto glass company that will help you when you don't have insurance… everything the big national glass company can do, with personal service and right in your area. I recommend them — I've used them for 20 years.",
+    text: "Great prices, dependable service… a local auto glass company that will help you when you don't have insurance… everything the big national glass company can do, with personal service and right in your area. I recommend them. I've used them for 20 years.",
   },
   {
     name: "AfricaMediaBuzz",
     tag: "Google review",
-    text: "They went above and beyond! Best price, best quality, FAST work, great location… Ask for David, the owner — a decent person, willing to work with me to replace my own windshield. I am so glad I chose this local small business over the big brand name.",
+    text: "They went above and beyond! Best price, best quality, FAST work, great location… Ask for David, the owner, a decent person, willing to work with me to replace my own windshield. I am so glad I chose this local small business over the big brand name.",
   },
 ];
 
 const HOME_FAQS = [
   {
     q: "Do you offer mobile auto glass service?",
-    a: `Yes. We come to your home or workplace anywhere in the Worcester area — Worcester, Shrewsbury, Auburn, Holden, Millbury, Leicester, and surrounding towns. Mobile service is usually same-day or next-day.`,
+    a: `Yes. We come to your home or workplace anywhere in the Worcester area: Worcester, Shrewsbury, Auburn, Holden, Millbury, Leicester, and surrounding towns. Mobile service is usually same-day or next-day.`,
   },
   {
     q: "Can you repair a chip instead of replacing the windshield?",
@@ -76,7 +76,7 @@ const HOME_FAQS = [
   },
   {
     q: "Do you replace side and rear windows?",
-    a: "Yes — door glass, vent glass, quarter glass, and rear windshields with defroster lines. We also vacuum out the broken glass.",
+    a: "Yes, door glass, vent glass, quarter glass, and rear windshields with defroster lines. We also vacuum out the broken glass.",
   },
   {
     q: "Do you accept insurance?",
@@ -95,7 +95,7 @@ const HOME_FAQS = [
 export default function Home() {
   return (
     <main>
-      {/* 1. Hero — full-bleed photo with dark scrim, content left */}
+      {/* 1. Hero, full-bleed photo with dark scrim, content left */}
       <section className="relative isolate overflow-hidden bg-ink-950 text-white">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -149,7 +149,7 @@ export default function Home() {
       <section className="border-b border-slate-200 bg-brand-50">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-5 text-center sm:flex-row sm:px-6 sm:text-left">
           <p className="text-base font-bold sm:text-lg">
-            Cracked windshield? Broken side window? Don&apos;t wait — it spreads.
+            Cracked windshield? Broken side window? Don&apos;t wait, it spreads.
           </p>
           <a
             href={BUSINESS.phoneHref}
@@ -166,7 +166,7 @@ export default function Home() {
           Auto glass services
         </h2>
         <p className="mt-3 max-w-2xl text-lg text-slate-600">
-          Every kind of vehicle glass — cars, trucks, 18-wheelers, and classics.
+          Every kind of vehicle glass, cars, trucks, 18-wheelers, and classics.
         </p>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s) => (
@@ -194,7 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Why choose us — split with shop-work photo */}
+      {/* 4. Why choose us, split with shop-work photo */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
@@ -245,8 +245,7 @@ export default function Home() {
               18-wheelers to classic cars
             </h2>
             <p className="mt-4 leading-relaxed text-slate-300">
-              Big rigs, fleet trucks, vans, and the classic in your garage —
-              we source and install glass most shops won&apos;t touch. Curved
+              Big rigs, fleet trucks, vans, and the classic in your garage, we source and install glass most shops won&apos;t touch. Curved
               back glass for a &apos;67? Tall windshields for a Peterbilt? Call
               us first.
             </p>
@@ -310,7 +309,7 @@ export default function Home() {
             </h2>
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-slate-300">
               We work with major insurance providers and bill them directly. In
-              Massachusetts, many policies include full glass coverage — which
+              Massachusetts, many policies include full glass coverage, which
               often means nothing out of pocket. Call us with your insurer&apos;s
               name and we&apos;ll walk you through it before any work starts.
             </p>
@@ -332,7 +331,7 @@ export default function Home() {
               Serving Worcester &amp; Central MA
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
-              In-shop service at {BUSINESS.address.street}, Worcester — or we
+              In-shop service at {BUSINESS.address.street}, Worcester, or we
               come to you with mobile service across the area:
             </p>
             <ul className="mt-5 flex flex-wrap gap-2">
@@ -404,7 +403,7 @@ export default function Home() {
             </p>
             <ul className="mt-6 space-y-2 text-sm font-semibold text-slate-700">
               <li className="flex items-center gap-2"><Check dark /> Same-day &amp; next-day appointments</li>
-              <li className="flex items-center gap-2"><Check dark /> In-shop or mobile — your choice</li>
+              <li className="flex items-center gap-2"><Check dark /> In-shop or mobile, your choice</li>
               <li className="flex items-center gap-2"><Check dark /> Insurance billed directly</li>
             </ul>
           </div>

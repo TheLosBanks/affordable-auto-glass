@@ -1,5 +1,5 @@
 // Single source of truth for business data. Every page, schema block, and
-// CTA reads from here — change it once, it changes everywhere.
+// CTA reads from here, change it once, it changes everywhere.
 
 export const BUSINESS = {
   name: "Affordable Auto Glass & Repair",
@@ -55,7 +55,7 @@ export const SERVICES = [
   {
     slug: "windshield-repair-worcester-ma",
     name: "Windshield Repair",
-    short: "Rock chips and small cracks fixed fast — often without replacement.",
+    short: "Rock chips and small cracks fixed fast, often without replacement.",
   },
   {
     slug: "windshield-replacement-worcester-ma",
