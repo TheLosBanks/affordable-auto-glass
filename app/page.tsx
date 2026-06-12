@@ -133,9 +133,9 @@ export default function Home() {
                 Request Free Quote
               </a>
             </div>
-            <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-2.5 text-sm font-semibold text-slate-200">
+            <ul className="mt-9 grid gap-2.5 text-sm font-semibold text-slate-200 sm:grid-cols-2 sm:gap-x-8">
               {TRUST_BADGES.map((b) => (
-                <li key={b} className="flex items-center gap-2">
+                <li key={b} className="flex items-center gap-2.5">
                   <Check />
                   {b}
                 </li>
