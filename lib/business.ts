@@ -26,8 +26,11 @@ export const BUSINESS = {
   rating: { value: 4.7, count: 70 }, // per GBP screenshot 2026-06-12
   directionsUrl:
     "https://www.google.com/maps/search/?api=1&query=42.2599,-71.7962",
-  // Official GBP share link from Carlos (listing name: "Affordable Auto Glass & Repair Co")
-  reviewsUrl: "https://share.google/KMUqWkdWuIOHFVRzF",
+  // Maps deep link, NOT the GBP share link: the share link opens Google
+  // Search, where competitors buy ads above the listing (Ocean Glass was
+  // outranking them on their own name). Maps opens the place card directly.
+  reviewsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Affordable+Auto+Glass+%26+Repair+Co+3+King+St+Worcester+MA+01610",
   serviceAreas: [
     "Worcester",
     "Shrewsbury",
