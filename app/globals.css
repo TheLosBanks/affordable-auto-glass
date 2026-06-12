@@ -18,9 +18,13 @@
 
 html {
   scroll-behavior: smooth;
-  /* Stop iOS elastic overscroll: bouncing past the dark footer exposed a
-     huge white void under the sticky call bar. (html for spec, body for
-     older Chrome behavior.) */
+  /* iOS elastic overscroll reveals the canvas (html) background beyond the
+     body. iOS Chrome ignores overscroll-behavior, so paint the canvas the
+     footer's dark color: bouncing past the end looks like the footer
+     continuing instead of a white void. Body stays white over all content.
+     Measured 2026-06-12: document height == footer bottom exactly, so this
+     is purely the bounce, not real overflow. */
+  background: var(--color-ink-950);
   overscroll-behavior-y: none;
 }
 
