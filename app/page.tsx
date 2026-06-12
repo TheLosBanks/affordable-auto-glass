@@ -40,6 +40,31 @@ const WHY_US = [
   },
 ];
 
+// Real Google reviews (screenshots from Carlos, 2026-06-12). Excerpted
+// verbatim — do not invent or embellish these.
+const REVIEWS = [
+  {
+    name: "Penny Aicardi",
+    tag: "Local Guide",
+    text: "After calling late on a Saturday afternoon, I was pleasantly surprised to receive a fair price quote right then and there on the phone… The communication was fantastic throughout the entire process. The repair itself was completed in about half an hour… professional, reasonably priced, and maintained excellent communication. I highly recommend them to anyone in need of auto glass repair!",
+  },
+  {
+    name: "Alisha Candela",
+    tag: "Local Guide",
+    text: "Called them to replace a rear window in a Freightliner, not your usual request. They came to the site we were working on same day, on time, and professional. Called four other places who could not make that happen. Very appreciative of Affordable Auto Glass!",
+  },
+  {
+    name: "Arthur Mooradian",
+    tag: "Local Guide",
+    text: "Great prices, dependable service… a local auto glass company that will help you when you don't have insurance… everything the big national glass company can do, with personal service and right in your area. I recommend them — I've used them for 20 years.",
+  },
+  {
+    name: "AfricaMediaBuzz",
+    tag: "Google review",
+    text: "They went above and beyond! Best price, best quality, FAST work, great location… Ask for David, the owner — a decent person, willing to work with me to replace my own windshield. I am so glad I chose this local small business over the big brand name.",
+  },
+];
+
 const HOME_FAQS = [
   {
     q: "Do you offer mobile auto glass service?",
@@ -256,8 +281,24 @@ export default function Home() {
             Read our Google reviews
           </a>
         </div>
-        {/* TODO(Carlos): paste 3–6 real Google reviews here (name, stars, text).
-            Deliberately not shipping invented testimonials. */}
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {REVIEWS.map((r) => (
+            <figure key={r.name} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-lg tracking-wide text-amber-500" aria-label="5 out of 5 stars">
+                ★★★★★
+              </p>
+              <blockquote className="mt-3 text-sm leading-relaxed text-slate-700">
+                &ldquo;{r.text}&rdquo;
+              </blockquote>
+              <figcaption className="mt-4 flex items-center justify-between">
+                <span className="font-bold">{r.name}</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  {r.tag} · Google
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </section>
 
       {/* 6. Insurance */}
