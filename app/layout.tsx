@@ -36,6 +36,7 @@ const jsonLd = {
   "@type": "AutoRepair",
   "@id": `${SITE_URL}/#business`,
   name: BUSINESS.name,
+  alternateName: "Affordable Auto Glass & Repair Co",
   url: SITE_URL,
   telephone: BUSINESS.phoneIntl,
   email: BUSINESS.email,

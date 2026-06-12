@@ -26,8 +26,8 @@ export const BUSINESS = {
   rating: { value: 4.6, count: 66 },
   directionsUrl:
     "https://www.google.com/maps/search/?api=1&query=42.2599,-71.7962",
-  reviewsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Affordable+Auto+Glass+%26+Repair+3+King+St+Worcester+MA",
+  // Official GBP share link from Carlos (listing name: "Affordable Auto Glass & Repair Co")
+  reviewsUrl: "https://share.google/KMUqWkdWuIOHFVRzF",
   serviceAreas: [
     "Worcester",
     "Shrewsbury",
