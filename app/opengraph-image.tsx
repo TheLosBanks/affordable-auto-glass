@@ -31,7 +31,7 @@ export default function Image() {
             color: "#f8b4c0",
           }}
         >
-          ★ {BUSINESS.rating.value} on Google · {BUSINESS.rating.count} reviews
+          {`${BUSINESS.rating.value} stars on Google · ${BUSINESS.rating.count} reviews`}
         </div>
         <div
           style={{
@@ -65,7 +65,7 @@ export default function Image() {
               fontWeight: 900,
             }}
           >
-            Call {BUSINESS.phone}
+            {`Call ${BUSINESS.phone}`}
           </div>
           <div style={{ fontSize: 28, color: "#94a3b8" }}>
             Affordable Auto Glass & Repair
