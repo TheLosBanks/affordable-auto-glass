@@ -18,9 +18,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* Stop iOS elastic overscroll: bouncing past the dark footer exposed a
+     huge white void under the sticky call bar. (html for spec, body for
+     older Chrome behavior.) */
+  overscroll-behavior-y: none;
 }
 
 body {
   background: #ffffff;
   color: var(--color-ink-950);
+  overscroll-behavior-y: none;
 }
