@@ -50,6 +50,15 @@ export default function QuoteForm() {
       onSubmit={handleSubmit}
       className="grid gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
     >
+      {/* Honeypot: hidden from humans; bots that fill it get silently dropped */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="grid gap-1.5 text-sm font-semibold">
           Name

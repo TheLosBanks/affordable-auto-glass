@@ -58,31 +58,37 @@ export const SERVICES = [
   {
     slug: "windshield-repair-worcester-ma",
     name: "Windshield Repair",
+    bestFor: "chips smaller than a quarter",
     short: "Rock chips and small cracks fixed fast, often without replacement.",
   },
   {
     slug: "windshield-replacement-worcester-ma",
     name: "Windshield Replacement",
+    bestFor: "long cracks or edge damage",
     short: "Full windshield replacement with OEM-quality glass and a lifetime warranty.",
   },
   {
     slug: "car-window-replacement-worcester-ma",
     name: "Side Window Replacement",
+    bestFor: "break-ins and shattered door glass",
     short: "Broken door glass replaced same-day, broken glass vacuumed out.",
   },
   {
     slug: "rear-windshield-replacement-worcester-ma",
     name: "Rear Windshield Replacement",
+    bestFor: "shattered back glass and dead defrosters",
     short: "Back glass with defroster lines replaced and tested.",
   },
   {
     slug: "mobile-auto-glass-repair-worcester-ma",
     name: "Mobile Service",
+    bestFor: "home or workplace appointments",
     short: "We come to your home or workplace anywhere in the Worcester area.",
   },
   {
     slug: "auto-glass-insurance-claims-worcester-ma",
     name: "Insurance Claims",
+    bestFor: "comprehensive and full glass coverage",
     short: "We bill your insurer directly and handle the paperwork.",
   },
 ] as const;

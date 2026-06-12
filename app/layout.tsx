@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       "Same-day and next-day auto glass service. Insurance accepted. Mobile service available. Call 508-304-3141 for a fast quote.",
   },
   robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
 };
 
 const jsonLd = {

@@ -92,9 +92,23 @@ const HOME_FAQS = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* 1. Hero, full-bleed photo with dark scrim, content left */}
       <section className="relative isolate overflow-hidden bg-ink-950 text-white">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -130,9 +144,13 @@ export default function Home() {
                 href="#quote"
                 className="flex items-center justify-center rounded-lg border-2 border-white/40 px-7 py-4 text-lg font-bold text-white backdrop-blur transition hover:bg-white/10"
               >
-                Request Free Quote
+                Get My Free Quote
               </a>
             </div>
+            <p className="mt-4 text-sm text-slate-300">
+              Fastest option: call now and describe the damage. We can usually
+              quote you on the spot.
+            </p>
             <ul className="mt-9 grid gap-2.5 text-sm font-semibold text-slate-200 sm:grid-cols-2 sm:gap-x-8">
               {TRUST_BADGES.map((b) => (
                 <li key={b} className="flex items-center gap-2.5">
@@ -178,6 +196,9 @@ export default function Home() {
               <h3 className="text-lg font-extrabold group-hover:text-brand-600">
                 {s.name}
               </h3>
+              <p className="mt-1 text-xs font-bold uppercase tracking-wide text-brand-600">
+                Best for: {s.bestFor}
+              </p>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.short}</p>
               <p className="mt-4 text-sm font-bold text-brand-600">Learn more →</p>
             </Link>
@@ -277,7 +298,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="rounded-lg border-2 border-brand-600 px-6 py-3 font-bold text-brand-600 transition hover:bg-brand-600 hover:text-white"
           >
-            Read our Google reviews
+            Read our {BUSINESS.rating.count} Google reviews
           </a>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
