@@ -4,9 +4,14 @@ import { PhoneIcon } from "@/components/Header";
 import QuoteForm from "@/components/QuoteForm";
 import Faq from "@/components/Faq";
 
-// TODO(Carlos): replace with a real photo of the shop / tech / van.
+// Stock photography (Unsplash) — Carlos's call; the shop has no original
+// photos except one shop exterior shot on their old About page.
 const HERO_PHOTO =
-  "https://images.unsplash.com/photo-1632823471565-1ecdf5c6da05?auto=format&fit=crop&w=1400&q=80";
+  "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80";
+const WORK_PHOTO =
+  "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1000&q=80";
+const CLASSIC_PHOTO =
+  "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1000&q=80";
 
 const WHY_US = [
   {
@@ -65,17 +70,25 @@ const HOME_FAQS = [
 export default function Home() {
   return (
     <main>
-      {/* 1. Hero */}
-      <section className="bg-ink-950 text-white">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.1fr_0.9fr] md:py-20">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-slate-400">
-              Local shop · {BUSINESS.address.street}, Worcester
+      {/* 1. Hero — full-bleed photo with dark scrim, content left */}
+      <section className="relative isolate overflow-hidden bg-ink-950 text-white">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_PHOTO}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink-950/95 via-ink-950/80 to-ink-950/45" />
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-bold backdrop-blur">
+              ★ {BUSINESS.rating.value} on Google · {BUSINESS.rating.count} reviews
             </p>
-            <h1 className="mt-4 text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl">
+            <h1 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl">
               Windshield Repair &amp; Replacement in Worcester, MA
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-200">
               Same-day and next-day auto glass service from a local shop with{" "}
               {BUSINESS.yearsInBusiness} years in business. Insurance accepted.
               Mobile service available.
@@ -83,19 +96,19 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href={BUSINESS.phoneHref}
-                className="flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-7 py-4 text-lg font-bold text-white transition hover:bg-brand-700"
+                className="flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-7 py-4 text-lg font-bold text-white shadow-lg shadow-brand-900/40 transition hover:bg-brand-700"
               >
                 <PhoneIcon className="h-5 w-5" />
                 Call {BUSINESS.phone}
               </a>
               <a
                 href="#quote"
-                className="flex items-center justify-center rounded-lg border border-white/25 px-7 py-4 text-lg font-bold text-white transition hover:bg-white/10"
+                className="flex items-center justify-center rounded-lg border-2 border-white/40 px-7 py-4 text-lg font-bold text-white backdrop-blur transition hover:bg-white/10"
               >
                 Request Free Quote
               </a>
             </div>
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-slate-300">
+            <ul className="mt-9 flex flex-wrap gap-x-6 gap-y-2.5 text-sm font-semibold text-slate-200">
               {TRUST_BADGES.map((b) => (
                 <li key={b} className="flex items-center gap-2">
                   <Check />
@@ -103,22 +116,6 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="relative hidden md:block">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={HERO_PHOTO}
-              alt="Technician installing a new windshield"
-              className="aspect-[4/3] w-full rounded-xl object-cover"
-            />
-            <div className="absolute -bottom-5 left-5 rounded-lg bg-white px-5 py-3.5 text-ink-950 shadow-lg">
-              <p className="text-xl font-black">
-                {BUSINESS.rating.value} ★{" "}
-                <span className="text-sm font-bold text-slate-500">
-                  · {BUSINESS.rating.count} Google reviews
-                </span>
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -172,19 +169,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Why choose us */}
+      {/* 4. Why choose us — split with shop-work photo */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
-          <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
-            Why Worcester drivers choose us
-          </h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {WHY_US.map((w) => (
-              <div key={w.title} className="rounded-xl bg-white p-6 shadow-sm">
-                <h3 className="font-extrabold">{w.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">{w.body}</p>
+          <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+            <div className="relative">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={WORK_PHOTO}
+                alt="Technician working under the hood in the shop"
+                className="aspect-[4/5] w-full rounded-2xl object-cover shadow-md lg:aspect-[3/4]"
+              />
+              <div className="absolute -bottom-5 left-5 rounded-xl bg-white px-5 py-4 shadow-lg">
+                <p className="text-2xl font-black text-brand-600">
+                  {BUSINESS.yearsInBusiness}
+                </p>
+                <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                  years in business
+                </p>
               </div>
-            ))}
+            </div>
+            <div>
+              <h2 className="text-3xl font-black tracking-tight sm:text-4xl">
+                Why Worcester drivers choose us
+              </h2>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {WHY_US.map((w) => (
+                  <div key={w.title} className="rounded-xl bg-white p-5 shadow-sm">
+                    <h3 className="font-extrabold">{w.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{w.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4b. Trucks & classics banner */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+        <div className="grid items-center gap-10 overflow-hidden rounded-2xl bg-ink-950 text-white md:grid-cols-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={CLASSIC_PHOTO}
+            alt="Classic car parked on a city street"
+            className="h-64 w-full object-cover md:h-full"
+          />
+          <div className="p-8 md:p-12">
+            <h2 className="text-3xl font-black tracking-tight">
+              18-wheelers to classic cars
+            </h2>
+            <p className="mt-4 leading-relaxed text-slate-300">
+              Big rigs, fleet trucks, vans, and the classic in your garage —
+              we source and install glass most shops won&apos;t touch. Curved
+              back glass for a &apos;67? Tall windshields for a Peterbilt? Call
+              us first.
+            </p>
+            <a
+              href={BUSINESS.phoneHref}
+              className="mt-7 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3.5 font-bold text-white transition hover:bg-brand-700"
+            >
+              <PhoneIcon className="h-4 w-4" />
+              Call about your vehicle
+            </a>
           </div>
         </div>
       </section>

@@ -5,14 +5,15 @@
 }
 
 @theme {
-  /* Single accent system: blue. Neutrals carry everything else. */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-600: #1d4ed8;
-  --color-brand-700: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-ink-950: #0b1220;
-  --color-ink-900: #111a2e;
+  /* Brand red pulled from the shop's existing site (#DD183B / #D51937 family).
+     Single accent system: red CTAs, neutral everything else. */
+  --color-brand-50: #fdf2f4;
+  --color-brand-100: #fae0e5;
+  --color-brand-600: #d31637;
+  --color-brand-700: #ab102b;
+  --color-brand-900: #7f0d20;
+  --color-ink-950: #0d1320;
+  --color-ink-900: #141c2e;
 }
 
 html {

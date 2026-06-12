@@ -6,8 +6,14 @@ export default function Footer() {
     <footer className="bg-ink-950 pb-24 text-slate-300 md:pb-0">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
-          <p className="text-lg font-extrabold text-white">Affordable Auto Glass &amp; Repair</p>
-          <p className="mt-3 text-sm leading-relaxed">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="Affordable Auto Glass & Repair"
+            className="h-12 w-auto"
+            style={{ filter: "brightness(0) invert(1)" }}
+          />
+          <p className="mt-4 text-sm leading-relaxed">
             Local auto glass shop serving Worcester and Central Massachusetts
             with {BUSINESS.yearsInBusiness} years in business and{" "}
             {BUSINESS.yearsExperience} years of hands-on experience.

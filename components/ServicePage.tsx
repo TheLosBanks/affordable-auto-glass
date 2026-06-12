@@ -48,7 +48,15 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="bg-ink-950 text-white">
+      <section className="relative isolate overflow-hidden bg-ink-950 text-white">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=70"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-ink-950/85" />
         <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 md:py-16">
           <p className="text-sm font-bold uppercase tracking-wider text-slate-400">
             {BUSINESS.name} · Worcester, MA

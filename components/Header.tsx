@@ -5,18 +5,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2" aria-label="Affordable Auto Glass & Repair home">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-brand-600 text-lg font-black text-white">
-            A
-          </span>
-          <span className="leading-tight">
-            <span className="block text-sm font-extrabold tracking-tight sm:text-base">
-              Affordable Auto Glass
-            </span>
-            <span className="block text-[11px] font-semibold uppercase tracking-wider text-slate-500">
-              Worcester, MA
-            </span>
-          </span>
+        <Link href="/" className="flex items-center" aria-label="Affordable Auto Glass & Repair home">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="Affordable Auto Glass & Repair"
+            className="h-11 w-auto sm:h-12"
+          />
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-slate-700 md:flex" aria-label="Primary">
           <Link href="/#services" className="hover:text-brand-600">Services</Link>
