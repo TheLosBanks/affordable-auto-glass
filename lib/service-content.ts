@@ -4,6 +4,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent & { metaTitle: strin
   "windshield-repair-worcester-ma": {
     slug: "windshield-repair-worcester-ma",
     serviceName: "Windshield Repair",
+    heroImage: "/windshield-crack.jpg",
     metaTitle: "Windshield Repair in Worcester, MA. Same-Day Chip & Crack Repair",
     metaDescription:
       "Rock chip and crack repair in Worcester, MA. Most repairs done in 30 minutes, often covered 100% by insurance. Mobile service available. Call 508-304-3141.",

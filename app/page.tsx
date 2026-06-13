@@ -4,10 +4,9 @@ import { PhoneIcon } from "@/components/Header";
 import QuoteForm from "@/components/QuoteForm";
 import Faq from "@/components/Faq";
 
-// Stock photography (Unsplash). Carlos's call; the shop has no original
-// photos except one shop exterior shot on their old About page.
-const HERO_PHOTO =
-  "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80";
+// Hero + why-us images are AI-generated for Carlos, self-hosted in /public.
+// Remaining Unsplash hotlink: the classics beetle below.
+const HERO_PHOTO = "/shop-hero.jpg";
 // Chip-repair injector on a windshield (AI-generated for Carlos, self-hosted)
 const WORK_PHOTO = "/chip-repair.jpg";
 const CLASSIC_PHOTO =
