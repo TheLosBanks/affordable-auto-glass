@@ -238,6 +238,7 @@ export const SERVICE_CONTENT: Record<string, ServiceContent & { metaTitle: strin
   "mobile-auto-glass-repair-worcester-ma": {
     slug: "mobile-auto-glass-repair-worcester-ma",
     serviceName: "Mobile Auto Glass Service",
+    heroImage: "/mobile-service.jpg",
     metaTitle: "Mobile Auto Glass Repair in Worcester, MA. We Come to You",
     metaDescription:
       "Mobile windshield repair and replacement across Worcester, Shrewsbury, Auburn, Holden, Millbury & Leicester MA. Same-day service at your home or work. Call 508-304-3141.",
