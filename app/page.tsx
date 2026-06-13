@@ -8,8 +8,10 @@ import Faq from "@/components/Faq";
 // photos except one shop exterior shot on their old About page.
 const HERO_PHOTO =
   "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1920&q=80";
+// Cracked car window from inside the cabin. The good "tech repairing a
+// windshield" shots on Unsplash are all premium-tier (404 on the free CDN).
 const WORK_PHOTO =
-  "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1000&q=80";
+  "https://images.unsplash.com/photo-1579620268136-6ef7eccc8b43?auto=format&fit=crop&w=1000&q=80";
 const CLASSIC_PHOTO =
   "https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=1000&q=80";
 
@@ -223,7 +225,7 @@ export default function Home() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={WORK_PHOTO}
-                alt="Technician working under the hood in the shop"
+                alt="Cracked car window seen from inside the cabin"
                 className="aspect-[4/5] w-full rounded-2xl object-cover shadow-md lg:aspect-[3/4]"
               />
               <div className="absolute -bottom-5 left-5 rounded-xl bg-white px-5 py-4 shadow-lg">
