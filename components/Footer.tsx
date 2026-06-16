@@ -60,11 +60,11 @@ export default function Footer() {
         </div>
         <div className="text-sm">
           <p className="mb-3 font-bold uppercase tracking-wider text-slate-500">Hours</p>
-          <ul className="space-y-2">
+          <ul className="space-y-2.5">
             {BUSINESS.hours.map((h) => (
-              <li key={h.days} className="flex justify-between gap-4">
-                <span>{h.days}</span>
-                <span className="text-slate-400">{h.time}</span>
+              <li key={h.days} className="flex flex-col">
+                <span className="font-semibold text-slate-300">{h.days}</span>
+                <span className="whitespace-nowrap text-slate-400">{h.time}</span>
               </li>
             ))}
           </ul>
