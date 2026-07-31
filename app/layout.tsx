@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import StickyCallBar from "@/components/StickyCallBar";
 import SiteTracker from "@/components/SiteTracker";
 import { BUSINESS, SITE_URL } from "@/lib/business";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -87,6 +88,7 @@ export default function RootLayout({
         <Footer />
         <StickyCallBar />
         <SiteTracker />
+        <Analytics />
       </body>
     </html>
   );
