@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCallBar from "@/components/StickyCallBar";
+import SiteTracker from "@/components/SiteTracker";
 import { BUSINESS, SITE_URL } from "@/lib/business";
 
 const inter = Inter({
@@ -85,6 +86,7 @@ export default function RootLayout({
         <div className="flex-1">{children}</div>
         <Footer />
         <StickyCallBar />
+        <SiteTracker />
       </body>
     </html>
   );

@@ -63,5 +63,20 @@ export async function POST(request: Request) {
     console.log("[quote] (no email configured)", { name, phone, service, vehicle, message });
   }
 
+  // Record the quote submission to the central tracker (best-effort).
+  const trackUrl = process.env.CRM_TRACK_URL;
+  const trackToken = process.env.INGEST_TOKEN;
+  if (trackUrl && trackToken) {
+    try {
+      await fetch(trackUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-ingest-token": trackToken },
+        body: JSON.stringify({ source: "affordable-auto-glass", type: "quote_submit" }),
+      });
+    } catch {
+      /* never fail a quote over analytics */
+    }
+  }
+
   return NextResponse.json({ ok: true });
 }
