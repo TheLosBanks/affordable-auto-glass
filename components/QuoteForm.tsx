@@ -82,6 +82,16 @@ export default function QuoteForm() {
           />
         </label>
       </div>
+      <label className="grid gap-1.5 text-sm font-semibold">
+        Email <span className="font-normal text-slate-500">(optional)</span>
+        <input
+          name="email"
+          type="email"
+          autoComplete="email"
+          className="rounded-lg border border-slate-300 px-3.5 py-3 text-base font-normal outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+          placeholder="you@example.com"
+        />
+      </label>
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="grid gap-1.5 text-sm font-semibold">
           Service needed

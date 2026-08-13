@@ -19,6 +19,7 @@ export async function POST(request: Request) {
 
   const name = (body.name || "").slice(0, 200).trim();
   const phone = (body.phone || "").slice(0, 50).trim();
+  const email = (body.email || "").slice(0, 200).trim();
   const service = (body.service || "").slice(0, 100).trim();
   const vehicle = (body.vehicle || "").slice(0, 200).trim();
   const message = (body.message || "").slice(0, 2000).trim();
@@ -32,28 +33,32 @@ export async function POST(request: Request) {
   const from = process.env.QUOTE_FROM_EMAIL;
 
   if (apiKey && to && from) {
+    const emailPayload: Record<string, unknown> = {
+      from,
+      to: [to],
+      subject: `Quote request: ${service} from ${name}`,
+      text: [
+        `New quote request from ${BUSINESS.name} website`,
+        ``,
+        `Name: ${name}`,
+        `Phone: ${phone}`,
+        `Email: ${email || "n/a"}`,
+        `Service: ${service}`,
+        `Vehicle: ${vehicle || "n/a"}`,
+        ``,
+        `Message:`,
+        message || "n/a",
+      ].join("\n"),
+    };
+    if (email) emailPayload.reply_to = email;
+
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        from,
-        to: [to],
-        subject: `Quote request: ${service} from ${name}`,
-        text: [
-          `New quote request from ${BUSINESS.name} website`,
-          ``,
-          `Name: ${name}`,
-          `Phone: ${phone}`,
-          `Service: ${service}`,
-          `Vehicle: ${vehicle || "n/a"}`,
-          ``,
-          `Message:`,
-          message || "n/a",
-        ].join("\n"),
-      }),
+      body: JSON.stringify(emailPayload),
     });
     if (!res.ok) {
       console.error("[quote] resend error", res.status, await res.text());
