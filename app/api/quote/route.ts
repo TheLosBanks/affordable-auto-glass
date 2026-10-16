@@ -22,6 +22,7 @@ export async function POST(request: Request) {
   const email = (body.email || "").slice(0, 200).trim();
   const service = (body.service || "").slice(0, 100).trim();
   const vehicle = (body.vehicle || "").slice(0, 200).trim();
+  const vinPlate = (body.vinPlate || "").slice(0, 60).trim().toUpperCase();
   const message = (body.message || "").slice(0, 2000).trim();
 
   if (!name || !phone || !service) {
@@ -45,6 +46,7 @@ export async function POST(request: Request) {
         `Email: ${email || "n/a"}`,
         `Service: ${service}`,
         `Vehicle: ${vehicle || "n/a"}`,
+        `VIN / Plate: ${vinPlate || "not provided (call to get it)"}`,
         ``,
         `Message:`,
         message || "n/a",
@@ -65,7 +67,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "send failed" }, { status: 502 });
     }
   } else {
-    console.log("[quote] (no email configured)", { name, phone, service, vehicle, message });
+    console.log("[quote] (no email configured)", { name, phone, service, vehicle, vinPlate, message });
   }
 
   // Record the quote submission to the central tracker (best-effort).

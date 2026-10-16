@@ -119,6 +119,25 @@ export default function QuoteForm() {
         </label>
       </div>
       <label className="grid gap-1.5 text-sm font-semibold">
+        <span>
+          VIN or license plate <span className="font-normal text-slate-500">(optional)</span>
+        </span>
+        <input
+          name="vinPlate"
+          autoCapitalize="characters"
+          autoComplete="off"
+          spellCheck={false}
+          aria-describedby="vin-plate-hint"
+          className="rounded-lg border border-slate-300 px-3.5 py-3 text-base font-normal uppercase outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+          placeholder="Full 17-character VIN, or plate # and state"
+        />
+        <span id="vin-plate-hint" className="text-sm font-normal text-slate-600">
+          For a faster quote, add your full VIN or plate number. It tells us exactly which glass
+          fits your vehicle, so we can skip the callback. Your VIN is on the driver&apos;s side
+          dashboard by the windshield or on your registration.
+        </span>
+      </label>
+      <label className="grid gap-1.5 text-sm font-semibold">
         Anything else we should know?
         <textarea
           name="message"
