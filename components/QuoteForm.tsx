@@ -129,12 +129,25 @@ export default function QuoteForm() {
           spellCheck={false}
           aria-describedby="vin-plate-hint"
           className="rounded-lg border border-slate-300 px-3.5 py-3 text-base font-normal uppercase outline-none placeholder:normal-case focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
-          placeholder="Full 17-character VIN, or plate # and state"
+          placeholder="1HGCM82633A004352 or 1ABC23 MA"
         />
-        <span id="vin-plate-hint" className="text-sm font-normal text-slate-600">
-          For a faster quote, add your full VIN or plate number. It tells us exactly which glass
-          fits your vehicle, so we can skip the callback. Your VIN is on the driver&apos;s side
-          dashboard by the windshield or on your registration.
+        <span id="vin-plate-hint" className="grid gap-1 text-sm font-normal text-slate-600">
+          <span>
+            For a faster quote, add your full VIN or your plate number and state. It tells us
+            exactly which glass fits your vehicle.
+          </span>
+          <span>
+            <strong className="font-semibold text-slate-700">VIN:</strong> all 17 characters,
+            e.g. 1HGCM82633A004352
+          </span>
+          <span>
+            <strong className="font-semibold text-slate-700">Plate:</strong> plate number, then
+            state, e.g. 1ABC23 MA
+          </span>
+          <span>
+            Your VIN is on the driver&apos;s side dashboard by the windshield or on your
+            registration.
+          </span>
         </span>
       </label>
       <label className="grid gap-1.5 text-sm font-semibold">
