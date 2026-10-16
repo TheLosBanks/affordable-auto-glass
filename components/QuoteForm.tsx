@@ -138,15 +138,12 @@ export default function QuoteForm() {
           </span>
           <span>
             <strong className="font-semibold text-slate-700">VIN:</strong> all 17 characters,
-            e.g. 1HGCM82633A004352
+            e.g. 1HGCM82633A004352. Find it on the driver&apos;s side dashboard by the
+            windshield or on your registration.
           </span>
           <span>
             <strong className="font-semibold text-slate-700">Plate:</strong> plate number, then
             state, e.g. 1ABC23 MA
-          </span>
-          <span>
-            Your VIN is on the driver&apos;s side dashboard by the windshield or on your
-            registration.
           </span>
         </span>
       </label>
