@@ -128,7 +128,7 @@ export default function QuoteForm() {
           autoComplete="off"
           spellCheck={false}
           aria-describedby="vin-plate-hint"
-          className="rounded-lg border border-slate-300 px-3.5 py-3 text-base font-normal uppercase outline-none focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
+          className="rounded-lg border border-slate-300 px-3.5 py-3 text-base font-normal uppercase outline-none placeholder:normal-case focus:border-brand-600 focus:ring-2 focus:ring-brand-100"
           placeholder="Full 17-character VIN, or plate # and state"
         />
         <span id="vin-plate-hint" className="text-sm font-normal text-slate-600">
